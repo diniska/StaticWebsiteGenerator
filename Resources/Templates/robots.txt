@@ -1,0 +1,7 @@
+User-agent: *
+Disallow:
+Allow: /
+
+{% for sitemap in sitemaps %}
+Sitemap: {{ sitemap }}
+{% endfor %}

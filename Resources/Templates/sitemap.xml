@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    {% for request in requests %}
+    <url>
+        <loc>{{baseUrl}}/{{request}}</loc>
+        <lastmod>{{date}}</lastmod>{# TODO: add current date #}
+        <changefreq>weekly</changefreq>{# TODO: add change frequency #}
+        <priority>1.0</priority>{# TODO: add priority computing #}
+    </url>
+    {% endfor %}
+</urlset>
