@@ -1,0 +1,8 @@
+language: swift
+
+podfile: Example/Podfile
+xcode_workspace: Example/StaticWebsiteGeneratorExample.xcworkspace
+xcode_scheme: StaticWebsiteGeneratorExample
+xcode_sdk: 
+#    - iphonesimulator
+    - macosx
