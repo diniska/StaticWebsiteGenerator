@@ -1,9 +1,9 @@
 language: swift
 
+rvm: 2.2.2
 before_install:
-    - rvm: 2.2.2
     - gem install cocoapods -v '0.39.0'  
-
+    
 podfile: Example/Podfile
 xcode_workspace: Example/StaticWebsiteGeneratorExample.xcworkspace
 xcode_scheme: StaticWebsiteGeneratorExample
