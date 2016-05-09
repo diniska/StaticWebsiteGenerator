@@ -10,20 +10,20 @@ import Foundation
 import PathKit
 
 
-public struct StaticWebsiteGenerator {
+public struct Generator {
 
     public init() {}
 
     private var outputPath: Path? = nil
     private var server: Server?
 
-    public func withOutputPath(path: String) -> StaticWebsiteGenerator {
+    public func withOutputPath(path: String) -> Generator {
         var result = self
         result.outputPath = Path(path)
         return result
     }
 
-    public func withServer(server: Server) -> StaticWebsiteGenerator {
+    public func withServer(server: Server) -> Generator {
         var result = self
         result.server = server
         return result

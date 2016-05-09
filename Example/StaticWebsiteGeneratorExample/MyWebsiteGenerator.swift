@@ -39,7 +39,7 @@ class MyWebsiteGenerator {
             .withServer(sitemapServer)
             .withServer(robotsTXTServer)
 
-        let generator = StaticWebsiteGenerator()
+        let generator = Generator()
             .withOutputPath(outputPath)
             .withServer(allServers)
 

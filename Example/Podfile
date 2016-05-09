@@ -6,7 +6,8 @@ use_frameworks!
 
 target 'StaticWebsiteGeneratorExample' do
 
-pod 'StaticWebsiteGenerator', '~> 0.0.1-beta1'
+#pod 'StaticWebsiteGenerator', '~> 0.0.1-beta1'
+pod 'StaticWebsiteGenerator', :path => '..'
 
 end
 
