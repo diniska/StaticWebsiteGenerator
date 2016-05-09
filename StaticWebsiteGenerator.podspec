@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "StaticWebsiteGenerator"
-  s.version      = "0.0.1-beta1"
+  s.version      = "0.0.1-beta2"
   s.summary      = "Simple static website generator library written in Swift."
 
   # This description is used to generate tags and improve search results.
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/diniska/StaticWebsiteGenerator.git", :tag => "0.0.1-beta1" }
+  s.source       = { :git => "https://github.com/diniska/StaticWebsiteGenerator.git", :tag => "0.0.1-beta2" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
