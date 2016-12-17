@@ -13,14 +13,14 @@ private typealias SimpleServerData = [HashableRequest : Response]
 public struct SimpleServerBuilder {
     public init() {}
 
-    private var data: SimpleServerData  = SimpleServerData()
-    public func byAppendingRequest(request: Request, withResponse response: Response) -> SimpleServerBuilder {
+    fileprivate var data: SimpleServerData  = SimpleServerData()
+    public func byAppendingRequest(_ request: Request, withResponse response: Response) -> SimpleServerBuilder {
         var res = self
         res.appendRequest(request, withResponse: response)
         return res
     }
 
-    public mutating func appendRequest(request: Request, withResponse response: Response) {
+    public mutating func appendRequest(_ request: Request, withResponse response: Response) {
         data[wrap(request)] = response
     }
 
@@ -31,14 +31,14 @@ public struct SimpleServerBuilder {
 
 private struct SimpleServer: Server {
     var data: SimpleServerData
-    func performRequest(request: Request, callback: (Response?) throws -> ()) throws {
+    func performRequest(_ request: Request, callback: (Response?) throws -> ()) throws {
         let response = data[wrap(request)]
         try callback(response)
     }
     var supportedRequests: [Request] {
         return data.keys.map(unwrap)
     }
-    private func supportsRequest(request: Request) -> Bool {
+    fileprivate func supportsRequest(_ request: Request) -> Bool {
         return data.keys.contains(wrap(request))
     }
 }

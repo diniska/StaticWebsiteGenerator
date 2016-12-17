@@ -14,7 +14,7 @@ public protocol CopyPathResponse: Response {
 }
 
 public extension CopyPathResponse {
-    func saveDataToPath(path: Path) throws {
+    func saveDataToPath(_ path: Path) throws {
         try ResponseUtils.copyAllFromPath(self.path, toPath: path)
     }
 }

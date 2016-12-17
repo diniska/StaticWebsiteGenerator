@@ -9,11 +9,11 @@
 import Foundation
 
 extension SimpleServerBuilder {
-    mutating func appendRequests<Sequence: SequenceType, Element: Request where Sequence.Generator.Element == Element>(requests: Sequence, withResponse response: Response) {
+    mutating func appendRequests<Sequence: Swift.Sequence, Element: Request>(_ requests: Sequence, withResponse response: Response) where Sequence.Iterator.Element == Element {
         requests.forEach { appendRequest($0, withResponse: response) }
     }
 
-    public func byAppendingRequests<Sequence: SequenceType, Element: Request where Sequence.Generator.Element == Element>(requests: Sequence, withResponse response: Response) -> SimpleServerBuilder {
+    public func byAppendingRequests<Sequence: Swift.Sequence, Element: Request>(_ requests: Sequence, withResponse response: Response) -> SimpleServerBuilder where Sequence.Iterator.Element == Element {
         var res = self
         res.appendRequests(requests, withResponse: response)
         return res

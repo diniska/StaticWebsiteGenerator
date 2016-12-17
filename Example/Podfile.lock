@@ -1,10 +1,10 @@
 PODS:
-  - PathKit (0.6.0)
-  - StaticWebsiteGenerator (0.0.1-beta1):
+  - PathKit (0.7.0)
+  - StaticWebsiteGenerator (0.0.1-beta2):
     - PathKit (~> 0.6)
     - Stencil (~> 0.5)
-  - Stencil (0.5.3):
-    - PathKit (~> 0.6.0)
+  - Stencil (0.7.2):
+    - PathKit (~> 0.7.0)
 
 DEPENDENCIES:
   - StaticWebsiteGenerator (from `..`)
@@ -14,8 +14,10 @@ EXTERNAL SOURCES:
     :path: ..
 
 SPEC CHECKSUMS:
-  PathKit: b224b6d2c4e75b87f08f45e1c0c610a3195c94e5
-  StaticWebsiteGenerator: 8d3ebd536adb6db6751fde2667323673fcf7f954
-  Stencil: f557adc65f8352122824d63963ac77af384e4214
+  PathKit: f8260c3e41bf4d552f3603853e32a5b325a176d4
+  StaticWebsiteGenerator: 0a3052b9193393a09b539e354dbc29b78fc416eb
+  Stencil: 7eeda74c79617b2802fd2f1267ac75e7d42fe925
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 14beee0816d2ee89b2ebaa6f0c1b0edc0e934004
+
+COCOAPODS: 1.1.1

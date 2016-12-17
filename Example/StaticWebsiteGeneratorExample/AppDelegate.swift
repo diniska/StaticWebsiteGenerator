@@ -14,8 +14,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var window: NSWindow!
 
 
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
-        let generator = MyWebsiteGenerator(outputPath: NSBundle.mainBundle().bundlePath + "/Result")
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
+        let generator = MyWebsiteGenerator(outputPath: Bundle.main.bundlePath + "/Result")
 
         do {
             try generator.generate()
@@ -23,10 +23,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             debugPrint("unable to generate website")
         }
 
-        NSWorkspace.sharedWorkspace().openFile(generator.outputPath)
+        NSWorkspace.shared().openFile(generator.outputPath)
     }
 
-    func applicationWillTerminate(aNotification: NSNotification) {}
+    func applicationWillTerminate(_ aNotification: Notification) {}
 
 }
 

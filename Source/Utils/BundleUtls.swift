@@ -10,8 +10,8 @@ import Foundation
 
 private class Bundle {}
 
-extension NSBundle {
-    static func currentBundle() -> NSBundle {
-        return self.init(forClass: Bundle.self)
+extension Foundation.Bundle {
+    static func currentBundle() -> Foundation.Bundle {
+        return self.init(for: Bundle.self)
     }
 }

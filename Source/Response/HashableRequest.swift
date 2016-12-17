@@ -22,10 +22,10 @@ func ==(lhs: HashableRequest, rhs: HashableRequest) -> Bool {
     return lhs.request.url == rhs.request.url
 }
 
-func wrap(request: Request) -> HashableRequest {
+func wrap(_ request: Request) -> HashableRequest {
     return HashableRequest(request: request)
 }
 
-func unwrap(hashableRequest: HashableRequest) -> Request {
+func unwrap(_ hashableRequest: HashableRequest) -> Request {
     return hashableRequest.request
 }

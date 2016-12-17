@@ -10,19 +10,19 @@ import Foundation
 import Stencil
 import PathKit
 
-private let dateFormatter: NSDateFormatter = {
-    let res = NSDateFormatter()
+private let dateFormatter: DateFormatter = {
+    let res = DateFormatter()
     res.dateFormat = "yyyy-MM-dd"
     return res
 }()
 
 private let emptyFileResponse = ""
 
-public func createSitemapGenerator(server: Server, baseUrl: String, scheme: String = "http") -> Response {
+public func createSitemapGenerator(_ server: Server, baseUrl: String, scheme: String = "http") -> Response {
 
     func createContextDictionary() -> [String: Any] {
         let requests = createRequestsPaths(server)
-        let date = dateFormatter.stringFromDate(NSDate())
+        let date = dateFormatter.string(from: Date())
         let result: [String: Any] = [
             "requests": requests,
             "date" : date,
@@ -33,7 +33,7 @@ public func createSitemapGenerator(server: Server, baseUrl: String, scheme: Stri
 
 
     return GeneratedStringResponse {
-        guard let template = try? Template(named: "sitemap.xml", inBundle: NSBundle.currentBundle())
+        guard let template = try? Template(named: "sitemap.xml", inBundle: Bundle.currentBundle())
             else { return emptyFileResponse }
 
         let dictionary = createContextDictionary()
@@ -59,9 +59,9 @@ public struct RobotsTXTParameters {
     }
 }
 
-public func createRobotsTXTGenerator(parameters: RobotsTXTParameters?) -> Response {
+public func createRobotsTXTGenerator(_ parameters: RobotsTXTParameters?) -> Response {
     return GeneratedStringResponse {
-        guard let template = try? Template(named: "robots.txt", inBundle: NSBundle.currentBundle())
+        guard let template = try? Template(named: "robots.txt", inBundle: Bundle.currentBundle())
             else { return emptyFileResponse }
 
         let dictionary: [String: Any]
@@ -84,6 +84,6 @@ public func createRobotsTXTGenerator(parameters: RobotsTXTParameters?) -> Respon
     }
 }
 
-func createRequestsPaths(server: Server) -> [Path] {
+func createRequestsPaths(_ server: Server) -> [Path] {
     return server.supportedRequests.map { $0.url }.map { Path($0) }
 }

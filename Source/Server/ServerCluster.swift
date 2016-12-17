@@ -9,17 +9,17 @@
 import Foundation
 
 public struct ServerCluster {
-    private var servers: [Server] = []
+    fileprivate var servers: [Server] = []
     public init() {}
 
-    private init(servers: [Server]) {
+    fileprivate init(servers: [Server]) {
         self.servers = servers
     }
 
-    public mutating func appendServer(server: Server) {
+    public mutating func appendServer(_ server: Server) {
         servers.append(server)
     }
-    public func withServer(server: Server) -> ServerCluster{
+    public func withServer(_ server: Server) -> ServerCluster{
         var res = self
         res.appendServer(server)
         return res
@@ -27,7 +27,7 @@ public struct ServerCluster {
 }
 
 extension ServerCluster: Server {
-    public func performRequest(request: Request, callback: (Response?) throws -> ()) throws {
+    public func performRequest(_ request: Request, callback: (Response?) throws -> ()) throws {
         var responded = false
         for server in servers {
             if server.supportsRequest(request) {
@@ -37,15 +37,15 @@ extension ServerCluster: Server {
             }
         }
         if !responded {
-            throw Error("There is no server in cluster that handle such request")
+            throw GeneratorError("There is no server in cluster that handle such request")
         }
     }
 
     public var supportedRequests: [Request] {
-        return servers.map { $0.supportedRequests }.reduce([], combine: +)
+        return servers.map { $0.supportedRequests }.reduce([], +)
     }
 
-    public func supportsRequest(request: Request) -> Bool {
+    public func supportsRequest(_ request: Request) -> Bool {
         for server in servers {
             if server.supportsRequest(request) {
                 return true

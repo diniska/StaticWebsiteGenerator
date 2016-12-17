@@ -11,7 +11,7 @@
 		0731A75F1CA5BF5600090244 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0731A75E1CA5BF5600090244 /* Assets.xcassets */; };
 		0731A7621CA5BF5600090244 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0731A7601CA5BF5600090244 /* MainMenu.xib */; };
 		07D36DA41CA5C07300F03824 /* MyWebsiteGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D36DA31CA5C07300F03824 /* MyWebsiteGenerator.swift */; };
-		20DBA03B2FE645BD322B14A9 /* Pods_StaticWebsiteGeneratorExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFCF64753D1481B18EE1EE0E /* Pods_StaticWebsiteGeneratorExample.framework */; };
+		0FBBAC17998C0A4CF80253FB /* Pods_StaticWebsiteGeneratorExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A03F7E5A3F2CCE7157568A98 /* Pods_StaticWebsiteGeneratorExample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,9 +21,9 @@
 		0731A7611CA5BF5600090244 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		0731A7631CA5BF5600090244 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07D36DA31CA5C07300F03824 /* MyWebsiteGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWebsiteGenerator.swift; sourceTree = "<group>"; };
-		1C899CA84AD78175E3509A64 /* Pods-StaticWebsiteGeneratorExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StaticWebsiteGeneratorExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StaticWebsiteGeneratorExample/Pods-StaticWebsiteGeneratorExample.debug.xcconfig"; sourceTree = "<group>"; };
-		EFCF64753D1481B18EE1EE0E /* Pods_StaticWebsiteGeneratorExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StaticWebsiteGeneratorExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F28F6AD4273958415BB5C3BB /* Pods-StaticWebsiteGeneratorExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StaticWebsiteGeneratorExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-StaticWebsiteGeneratorExample/Pods-StaticWebsiteGeneratorExample.release.xcconfig"; sourceTree = "<group>"; };
+		0B0C274D86865B4B5B8215AC /* Pods-StaticWebsiteGeneratorExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StaticWebsiteGeneratorExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-StaticWebsiteGeneratorExample/Pods-StaticWebsiteGeneratorExample.release.xcconfig"; sourceTree = "<group>"; };
+		21C1EB207D5306F08EF408E2 /* Pods-StaticWebsiteGeneratorExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StaticWebsiteGeneratorExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StaticWebsiteGeneratorExample/Pods-StaticWebsiteGeneratorExample.debug.xcconfig"; sourceTree = "<group>"; };
+		A03F7E5A3F2CCE7157568A98 /* Pods_StaticWebsiteGeneratorExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StaticWebsiteGeneratorExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,7 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20DBA03B2FE645BD322B14A9 /* Pods_StaticWebsiteGeneratorExample.framework in Frameworks */,
+				0FBBAC17998C0A4CF80253FB /* Pods_StaticWebsiteGeneratorExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,8 +43,8 @@
 			children = (
 				0731A75B1CA5BF5600090244 /* StaticWebsiteGeneratorExample */,
 				0731A75A1CA5BF5600090244 /* Products */,
-				6E7CFD96BD91498C22598CFE /* Pods */,
-				B8BDD2C8969A7A584CA99FDD /* Frameworks */,
+				89A2EDF34BA383CD143CA4CB /* Pods */,
+				E85165A7EC34D4EEC70DFD66 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,19 +68,19 @@
 			path = StaticWebsiteGeneratorExample;
 			sourceTree = "<group>";
 		};
-		6E7CFD96BD91498C22598CFE /* Pods */ = {
+		89A2EDF34BA383CD143CA4CB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1C899CA84AD78175E3509A64 /* Pods-StaticWebsiteGeneratorExample.debug.xcconfig */,
-				F28F6AD4273958415BB5C3BB /* Pods-StaticWebsiteGeneratorExample.release.xcconfig */,
+				21C1EB207D5306F08EF408E2 /* Pods-StaticWebsiteGeneratorExample.debug.xcconfig */,
+				0B0C274D86865B4B5B8215AC /* Pods-StaticWebsiteGeneratorExample.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		B8BDD2C8969A7A584CA99FDD /* Frameworks */ = {
+		E85165A7EC34D4EEC70DFD66 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EFCF64753D1481B18EE1EE0E /* Pods_StaticWebsiteGeneratorExample.framework */,
+				A03F7E5A3F2CCE7157568A98 /* Pods_StaticWebsiteGeneratorExample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -92,12 +92,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0731A7661CA5BF5600090244 /* Build configuration list for PBXNativeTarget "StaticWebsiteGeneratorExample" */;
 			buildPhases = (
-				720106D7E0628AD1E27971EF /* Check Pods Manifest.lock */,
+				C0CF26C67656D1AAEDC75671 /* [CP] Check Pods Manifest.lock */,
 				0731A7551CA5BF5600090244 /* Sources */,
 				0731A7561CA5BF5600090244 /* Frameworks */,
 				0731A7571CA5BF5600090244 /* Resources */,
-				C330C5ECAD41043FE398F3F1 /* Embed Pods Frameworks */,
-				11EC654D803C3FED26D54E13 /* Copy Pods Resources */,
+				74D37815CB6536DB0C68774E /* [CP] Embed Pods Frameworks */,
+				AD91F84176EBF6299526101E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,6 +120,7 @@
 				TargetAttributes = {
 					0731A7581CA5BF5600090244 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0820;
 					};
 				};
 			};
@@ -154,14 +155,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		11EC654D803C3FED26D54E13 /* Copy Pods Resources */ = {
+		74D37815CB6536DB0C68774E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StaticWebsiteGeneratorExample/Pods-StaticWebsiteGeneratorExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD91F84176EBF6299526101E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,34 +185,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StaticWebsiteGeneratorExample/Pods-StaticWebsiteGeneratorExample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		720106D7E0628AD1E27971EF /* Check Pods Manifest.lock */ = {
+		C0CF26C67656D1AAEDC75671 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		C330C5ECAD41043FE398F3F1 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StaticWebsiteGeneratorExample/Pods-StaticWebsiteGeneratorExample-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -309,7 +310,7 @@
 		};
 		0731A7671CA5BF5600090244 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1C899CA84AD78175E3509A64 /* Pods-StaticWebsiteGeneratorExample.debug.xcconfig */;
+			baseConfigurationReference = 21C1EB207D5306F08EF408E2 /* Pods-StaticWebsiteGeneratorExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -317,12 +318,13 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = diniska.StaticWebsiteGeneratorExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		0731A7681CA5BF5600090244 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F28F6AD4273958415BB5C3BB /* Pods-StaticWebsiteGeneratorExample.release.xcconfig */;
+			baseConfigurationReference = 0B0C274D86865B4B5B8215AC /* Pods-StaticWebsiteGeneratorExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -330,6 +332,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = diniska.StaticWebsiteGeneratorExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

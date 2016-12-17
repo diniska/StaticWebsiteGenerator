@@ -14,16 +14,16 @@ public struct Generator {
 
     public init() {}
 
-    private var outputPath: Path? = nil
-    private var server: Server?
+    fileprivate var outputPath: Path? = nil
+    fileprivate var server: Server?
 
-    public func withOutputPath(path: String) -> Generator {
+    public func withOutputPath(_ path: String) -> Generator {
         var result = self
         result.outputPath = Path(path)
         return result
     }
 
-    public func withServer(server: Server) -> Generator {
+    public func withServer(_ server: Server) -> Generator {
         var result = self
         result.server = server
         return result
@@ -31,9 +31,9 @@ public struct Generator {
 
     public func generate() throws {
         guard let server = server
-            else { throw Error("There is no website producer") }
+            else { throw GeneratorError("There is no website producer") }
         guard let outputPath = outputPath
-            else { throw Error("There is no output path") }
+            else { throw GeneratorError("There is no output path") }
 
         try server.supportedRequests.forEach { (request) in
             debugPrint("performing request \(request.url)")

@@ -14,7 +14,7 @@ public protocol StringResponse: Response {
 }
 
 public extension StringResponse {
-    func saveDataToPath(path: Path) throws {
+    func saveDataToPath(_ path: Path) throws {
         try ResponseUtils.saveData(response, toFile: path)
     }
 }
@@ -28,7 +28,7 @@ public struct StaticStringResponse: StringResponse {
 
 public struct GeneratedStringResponse: StringResponse {
     public typealias Generator = () -> String
-    public init(generator: Generator) {
+    public init(generator: @escaping Generator) {
         self.generator = generator
     }
     public var generator: Generator

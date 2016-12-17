@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Error: ErrorType {
+public struct GeneratorError: Error {
     public var description: String
     init (_ description: String) {
         self.description = description

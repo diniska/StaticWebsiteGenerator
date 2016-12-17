@@ -14,11 +14,11 @@ public protocol Request {
 }
 
 public protocol Response {
-    func saveDataToPath(path: Path) throws
+    func saveDataToPath(_ path: Path) throws
 }
 
 public protocol Server {
-    func performRequest(request: Request, callback: (Response?) throws -> ()) throws
+    func performRequest(_ request: Request, callback: (Response?) throws -> ()) throws
     var supportedRequests: [Request] { get }
-    func supportsRequest(request: Request) -> Bool
+    func supportsRequest(_ request: Request) -> Bool
 }

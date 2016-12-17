@@ -31,7 +31,7 @@ public func ==(lhs: LocalizedRequest, rhs: LocalizedRequest) -> Bool {
 }
 
 extension LocalizedRequest {
-    public static func withRequest<Sequence: SequenceType where Sequence.Generator.Element == String>(path: String, localizations: Sequence) -> [LocalizedRequest] {
+    public static func withRequest<Sequence: Swift.Sequence>(_ path: String, localizations: Sequence) -> [LocalizedRequest] where Sequence.Iterator.Element == String {
         return localizations.map {
             LocalizedRequest(path: path, localization: $0)
         }
