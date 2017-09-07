@@ -12,3 +12,6 @@ xcode_scheme: StaticWebsiteGeneratorExample
 #xcode_sdk: 
 #    - iphonesimulator
 #    - macosx
+
+script:
+    - xcodebuild test -workspace Example/StaticWebsiteGeneratorExample.xcworkspace -scheme StaticWebsiteGeneratorExample  
