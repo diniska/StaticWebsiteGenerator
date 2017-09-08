@@ -2,7 +2,7 @@ language: swift
 osx_image: xcode9.0
 
 #rvm: 2.2.2
-#before_install:
+before_install:
    - gem install cocoapods -v '1.2.1'
 #    - pod repo update
     
