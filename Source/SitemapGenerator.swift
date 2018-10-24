@@ -21,7 +21,7 @@ private let emptyFileResponse = ""
 public func createSitemapGenerator(_ server: Server, baseUrl: String, scheme: String = "http") -> Response {
 
     func createContextDictionary() -> [String: Any] {
-        let requests = createRequestsPaths(server)
+        let requests = server.requestsPaths()
         let date = dateFormatter.string(from: Date())
         let result: [String: Any] = [
             "requests": requests,
@@ -66,7 +66,7 @@ public func createRobotsTXTGenerator(_ parameters: RobotsTXTParameters?) -> Resp
 
         let dictionary: [String: Any]
         if let parameters = parameters {
-            let sitemaps = createRequestsPaths(parameters.sitemapServer).map {
+            let sitemaps = parameters.sitemapServer.requestsPaths().map {
                 "\(parameters.scheme)://\(parameters.baseUrl)/\($0)"
             }
             dictionary = [
@@ -84,6 +84,33 @@ public func createRobotsTXTGenerator(_ parameters: RobotsTXTParameters?) -> Resp
     }
 }
 
-func createRequestsPaths(_ server: Server) -> [Path] {
-    return server.supportedRequests.map { $0.url }.map { Path($0) }
+private extension Server {
+    func requestsPaths() -> [Path] {
+        return supportedRequests
+            .map { $0.url }
+            .sorted { lhs, rhs in
+                var lhsDirectories = lhs.lowercased().components(separatedBy: "/")
+                if lhsDirectories.last == "" {
+                    lhsDirectories = Array(lhsDirectories.dropLast())
+                }
+                var rhsDirectories = rhs.lowercased().components(separatedBy: "/")
+                if rhsDirectories.last == "" {
+                    rhsDirectories = Array(rhsDirectories.dropLast())
+                }
+                
+                guard lhsDirectories.count == rhsDirectories.count
+                    else {
+                        return lhsDirectories.count < rhsDirectories.count
+                    }
+                
+                for i in 0 ..< lhsDirectories.count {
+                    guard lhsDirectories[i] == rhsDirectories[i]
+                        else {
+                            return lhsDirectories[i] < rhsDirectories[i]
+                        }
+                }
+                return false // they are equal
+            }
+            .map { Path($0) }
+    }
 }
