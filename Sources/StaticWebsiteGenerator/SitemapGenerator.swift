@@ -33,10 +33,14 @@ public func createSitemapGenerator(_ server: Server, baseUrl: String, scheme: St
 
 
     return GeneratedStringResponse {
-        guard let template = try? Template(named: "sitemap.xml", inBundle: Bundle.currentBundle())
+        guard let resourcesPath = Bundle.currentBundle().resourcePath
             else { return emptyFileResponse }
-
-        guard let result = try? template.render(createContext())
+        
+        let environment = Environment(
+            loader: FileSystemLoader(paths: [Path(resourcesPath)])
+        )
+        
+        guard let result = try? environment.renderTemplate(name: "sitemap.xml", context: createContext())
             else { return emptyFileResponse }
 
         return result
