@@ -47,7 +47,6 @@ final class SampleGeneratorTestTests: XCTestCase {
         let generator = Generator()
             .withOutputPath(outputPath)
             .withServer(allServers)
-print(outputPath)
         XCTAssertNoThrow(try generator.generate())
     }
 
