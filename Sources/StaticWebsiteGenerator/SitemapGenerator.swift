@@ -20,7 +20,7 @@ private let emptyFileResponse = ""
 
 public func createSitemapGenerator(_ server: Server, baseUrl: String, scheme: String = "http") -> Response {
 
-    func createContextDictionary() -> [String: Any] {
+    func createContext() -> [String: Any] {
         let requests = server.requestsPaths()
         let date = dateFormatter.string(from: Date())
         let result: [String: Any] = [
@@ -36,10 +36,7 @@ public func createSitemapGenerator(_ server: Server, baseUrl: String, scheme: St
         guard let template = try? Template(named: "sitemap.xml", inBundle: Bundle.currentBundle())
             else { return emptyFileResponse }
 
-        let dictionary = createContextDictionary()
-        let context = Context(dictionary: dictionary)
-
-        guard let result = try? template.render(context)
+        guard let result = try? template.render(createContext())
             else { return emptyFileResponse }
 
         return result
@@ -64,18 +61,18 @@ public func createRobotsTXTGenerator(_ parameters: RobotsTXTParameters?) -> Resp
         guard let template = try? Template(named: "robots.txt", inBundle: Bundle.currentBundle())
             else { return emptyFileResponse }
 
-        let dictionary: [String: Any]
+        let context: [String: Any]
         if let parameters = parameters {
             let sitemaps = parameters.sitemapServer.requestsPaths().map {
                 "\(parameters.scheme)://\(parameters.baseUrl)/\($0)"
             }
-            dictionary = [
+            context = [
                 "sitemaps" : sitemaps
             ]
         } else {
-            dictionary = [:]
+            context = [:]
         }
-        let context = Context(dictionary: dictionary)
+//        let context = Context(dictionary: dictionary)
 
         guard let result = try? template.render(context)
             else { return emptyFileResponse }
