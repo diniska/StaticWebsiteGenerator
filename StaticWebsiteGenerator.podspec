@@ -135,7 +135,7 @@ Pod::Spec.new do |s|
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
   
-  s.dependency "Stencil", "~> 0.7.2"
-  s.dependency "PathKit", "~> 0.7.0"
+  s.dependency "Stencil", "~> 0.13.1"
+  s.dependency "PathKit", "~> 0.9.0"
 
 end
