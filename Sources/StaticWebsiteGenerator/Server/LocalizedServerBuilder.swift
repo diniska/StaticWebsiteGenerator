@@ -9,7 +9,7 @@
 import Foundation
 
 extension SimpleServerBuilder {
-    public typealias LocalizedResponseGenerator = (Localization) -> String
+    public typealias LocalizedResponseGenerator = (Localization) throws -> String
 
     public func byAppendingRequest(_ request: LocalizedRequest, withResponse response: @escaping LocalizedResponseGenerator) -> SimpleServerBuilder {
         let wrapper = createResponse(request, response:  response)
@@ -39,5 +39,5 @@ extension SimpleServerBuilder {
 }
 
 private func createResponse(_ request: LocalizedRequest, response: @escaping SimpleServerBuilder.LocalizedResponseGenerator) -> Response {
-    return GeneratedStringResponse { response(request.localization) }
+    return GeneratedStringResponse { try response(request.localization) }
 }

@@ -10,29 +10,28 @@ import Foundation
 import PathKit
 
 public protocol StringResponse: Response {
-    var response: String { get }
+    func response() throws -> String
 }
 
 public extension StringResponse {
     func saveDataToPath(_ path: Path) throws {
-        try ResponseUtils.saveData(response, toFile: path)
+        try ResponseUtils.saveData(try response(), toFile: path)
     }
 }
 
 public struct StaticStringResponse: StringResponse {
-    public let response: String
+    private let _response: String
+    public func response() throws -> String { _response }
     public init(response: String) {
-        self.response = response
+        _response = response
     }
 }
 
 public struct GeneratedStringResponse: StringResponse {
-    public typealias Generator = () -> String
+    public typealias Generator = () throws -> String
     public init(generator: @escaping Generator) {
         self.generator = generator
     }
     public var generator: Generator
-    public var response: String {
-        return generator()
-    }
+    public func response() throws -> String { try generator() }
 }
