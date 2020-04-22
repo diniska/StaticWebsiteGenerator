@@ -18,7 +18,7 @@ private let dateFormatter: DateFormatter = {
 
 private let emptyFileResponse = ""
 
-public func createSitemapGenerator(_ server: Server, baseUrl: String, scheme: String = "http") -> Response {
+public func createSitemapGenerator(_ server: Server, baseUrl: String, scheme: String = "http", environment: Environment? = nil) -> Response {
 
     func createContext() -> [String: Any] {
         let requests = server.requestsPaths().sorted()
@@ -33,14 +33,9 @@ public func createSitemapGenerator(_ server: Server, baseUrl: String, scheme: St
 
 
     return GeneratedStringResponse {
-        guard let resourcesPath = Bundle.currentBundle().resourcePath
-            else { return emptyFileResponse }
+        let env = environment ?? Environment(loader: FileSystemLoader(bundle: [Bundle.currentBundle()]))
         
-        let environment = Environment(
-            loader: FileSystemLoader(paths: [Path(resourcesPath)])
-        )
-        
-        guard let result = try? environment.renderTemplate(name: "sitemap.xml", context: createContext())
+        guard let result = try? env.renderTemplate(name: "sitemap.xml", context: createContext())
             else { return emptyFileResponse }
 
         return result
@@ -60,10 +55,10 @@ public struct RobotsTXTParameters {
     }
 }
 
-public func createRobotsTXTGenerator(_ parameters: RobotsTXTParameters?) -> Response {
+public func createRobotsTXTGenerator(_ parameters: RobotsTXTParameters?, environment: Environment? = nil) -> Response {
     return GeneratedStringResponse {
-        let environment = Environment(loader: FileSystemLoader(bundle: [Bundle.currentBundle()]))
-        guard let template = try? environment.loadTemplate(name: "robots.txt")
+        let env = environment ?? Environment(loader: FileSystemLoader(bundle: [Bundle.currentBundle()]))
+        guard let template = try? env.loadTemplate(name: "robots.txt")
             else { return emptyFileResponse }
 
         let context: [String: Any]
