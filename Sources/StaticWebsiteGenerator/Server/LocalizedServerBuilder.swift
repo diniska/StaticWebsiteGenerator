@@ -12,13 +12,11 @@ extension SimpleServerBuilder {
     public typealias LocalizedResponseGenerator = (Localization) throws -> String
 
     public func byAppendingRequest(_ request: LocalizedRequest, withResponse response: @escaping LocalizedResponseGenerator) -> SimpleServerBuilder {
-        let wrapper = createResponse(request, response:  response)
-        return byAppendingRequest(request, withResponse: wrapper as! (Localization) -> String)
+        byAppendingRequest(request, withResponse: createResponse(request, response:  response))
     }
 
     public mutating func appendRequest(_ request: LocalizedRequest, withResponse response: @escaping LocalizedResponseGenerator) {
-        let wrapper = createResponse(request, response:  response)
-        appendRequest(request, withResponse: wrapper as! (Localization) -> String)
+        appendRequest(request, withResponse: createResponse(request, response:  response))
     }
 
     mutating func appendRequests<Sequence: Swift.Sequence>(_ requests: Sequence, withResponse response: @escaping LocalizedResponseGenerator) where Sequence.Iterator.Element == LocalizedRequest {

@@ -62,7 +62,8 @@ public struct RobotsTXTParameters {
 
 public func createRobotsTXTGenerator(_ parameters: RobotsTXTParameters?) -> Response {
     return GeneratedStringResponse {
-        guard let template = try? Template(named: "robots.txt", inBundle: Bundle.currentBundle())
+        let environment = Environment(loader: FileSystemLoader(bundle: [Bundle.currentBundle()]))
+        guard let template = try? environment.loadTemplate(name: "robots.txt")
             else { return emptyFileResponse }
 
         let context: [String: Any]
@@ -76,7 +77,6 @@ public func createRobotsTXTGenerator(_ parameters: RobotsTXTParameters?) -> Resp
         } else {
             context = [:]
         }
-//        let context = Context(dictionary: dictionary)
 
         guard let result = try? template.render(context)
             else { return emptyFileResponse }
