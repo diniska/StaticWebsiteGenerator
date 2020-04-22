@@ -10,9 +10,19 @@
 		0731A75D1CA5BF5600090244 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0731A75C1CA5BF5600090244 /* AppDelegate.swift */; };
 		0731A75F1CA5BF5600090244 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0731A75E1CA5BF5600090244 /* Assets.xcassets */; };
 		0731A7621CA5BF5600090244 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0731A7601CA5BF5600090244 /* MainMenu.xib */; };
+		07710B6F1F614AB400EBB31B /* StaticWebsiteGeneratorExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07710B6E1F614AB400EBB31B /* StaticWebsiteGeneratorExampleTests.swift */; };
 		07D36DA41CA5C07300F03824 /* MyWebsiteGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D36DA31CA5C07300F03824 /* MyWebsiteGenerator.swift */; };
-		0FBBAC17998C0A4CF80253FB /* Pods_StaticWebsiteGeneratorExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A03F7E5A3F2CCE7157568A98 /* Pods_StaticWebsiteGeneratorExample.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		07710B711F614AB400EBB31B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0731A7511CA5BF5600090244 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0731A7581CA5BF5600090244;
+			remoteInfo = StaticWebsiteGeneratorExample;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0731A7591CA5BF5600090244 /* StaticWebsiteGeneratorExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StaticWebsiteGeneratorExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,10 +30,10 @@
 		0731A75E1CA5BF5600090244 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0731A7611CA5BF5600090244 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		0731A7631CA5BF5600090244 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07710B6C1F614AB400EBB31B /* StaticWebsiteGeneratorExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StaticWebsiteGeneratorExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		07710B6E1F614AB400EBB31B /* StaticWebsiteGeneratorExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticWebsiteGeneratorExampleTests.swift; sourceTree = "<group>"; };
+		07710B701F614AB400EBB31B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07D36DA31CA5C07300F03824 /* MyWebsiteGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWebsiteGenerator.swift; sourceTree = "<group>"; };
-		0B0C274D86865B4B5B8215AC /* Pods-StaticWebsiteGeneratorExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StaticWebsiteGeneratorExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-StaticWebsiteGeneratorExample/Pods-StaticWebsiteGeneratorExample.release.xcconfig"; sourceTree = "<group>"; };
-		21C1EB207D5306F08EF408E2 /* Pods-StaticWebsiteGeneratorExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StaticWebsiteGeneratorExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StaticWebsiteGeneratorExample/Pods-StaticWebsiteGeneratorExample.debug.xcconfig"; sourceTree = "<group>"; };
-		A03F7E5A3F2CCE7157568A98 /* Pods_StaticWebsiteGeneratorExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StaticWebsiteGeneratorExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,7 +41,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FBBAC17998C0A4CF80253FB /* Pods_StaticWebsiteGeneratorExample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07710B691F614AB400EBB31B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,9 +58,8 @@
 			isa = PBXGroup;
 			children = (
 				0731A75B1CA5BF5600090244 /* StaticWebsiteGeneratorExample */,
+				07710B6D1F614AB400EBB31B /* StaticWebsiteGeneratorExampleTests */,
 				0731A75A1CA5BF5600090244 /* Products */,
-				89A2EDF34BA383CD143CA4CB /* Pods */,
-				E85165A7EC34D4EEC70DFD66 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				0731A7591CA5BF5600090244 /* StaticWebsiteGeneratorExample.app */,
+				07710B6C1F614AB400EBB31B /* StaticWebsiteGeneratorExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,21 +84,13 @@
 			path = StaticWebsiteGeneratorExample;
 			sourceTree = "<group>";
 		};
-		89A2EDF34BA383CD143CA4CB /* Pods */ = {
+		07710B6D1F614AB400EBB31B /* StaticWebsiteGeneratorExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				21C1EB207D5306F08EF408E2 /* Pods-StaticWebsiteGeneratorExample.debug.xcconfig */,
-				0B0C274D86865B4B5B8215AC /* Pods-StaticWebsiteGeneratorExample.release.xcconfig */,
+				07710B6E1F614AB400EBB31B /* StaticWebsiteGeneratorExampleTests.swift */,
+				07710B701F614AB400EBB31B /* Info.plist */,
 			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		E85165A7EC34D4EEC70DFD66 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A03F7E5A3F2CCE7157568A98 /* Pods_StaticWebsiteGeneratorExample.framework */,
-			);
-			name = Frameworks;
+			path = StaticWebsiteGeneratorExampleTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -92,12 +100,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0731A7661CA5BF5600090244 /* Build configuration list for PBXNativeTarget "StaticWebsiteGeneratorExample" */;
 			buildPhases = (
-				C0CF26C67656D1AAEDC75671 /* [CP] Check Pods Manifest.lock */,
 				0731A7551CA5BF5600090244 /* Sources */,
 				0731A7561CA5BF5600090244 /* Frameworks */,
 				0731A7571CA5BF5600090244 /* Resources */,
-				74D37815CB6536DB0C68774E /* [CP] Embed Pods Frameworks */,
-				AD91F84176EBF6299526101E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -108,19 +113,42 @@
 			productReference = 0731A7591CA5BF5600090244 /* StaticWebsiteGeneratorExample.app */;
 			productType = "com.apple.product-type.application";
 		};
+		07710B6B1F614AB400EBB31B /* StaticWebsiteGeneratorExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07710B751F614AB400EBB31B /* Build configuration list for PBXNativeTarget "StaticWebsiteGeneratorExampleTests" */;
+			buildPhases = (
+				07710B681F614AB400EBB31B /* Sources */,
+				07710B691F614AB400EBB31B /* Frameworks */,
+				07710B6A1F614AB400EBB31B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07710B721F614AB400EBB31B /* PBXTargetDependency */,
+			);
+			name = StaticWebsiteGeneratorExampleTests;
+			productName = StaticWebsiteGeneratorExampleTests;
+			productReference = 07710B6C1F614AB400EBB31B /* StaticWebsiteGeneratorExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		0731A7511CA5BF5600090244 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
+				LastSwiftUpdateCheck = 0900;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = diniska;
 				TargetAttributes = {
 					0731A7581CA5BF5600090244 = {
 						CreatedOnToolsVersion = 7.3;
 						LastSwiftMigration = 0820;
+					};
+					07710B6B1F614AB400EBB31B = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Manual;
+						TestTargetID = 0731A7581CA5BF5600090244;
 					};
 				};
 			};
@@ -129,6 +157,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -138,6 +167,7 @@
 			projectRoot = "";
 			targets = (
 				0731A7581CA5BF5600090244 /* StaticWebsiteGeneratorExample */,
+				07710B6B1F614AB400EBB31B /* StaticWebsiteGeneratorExampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -152,55 +182,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		07710B6A1F614AB400EBB31B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		74D37815CB6536DB0C68774E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StaticWebsiteGeneratorExample/Pods-StaticWebsiteGeneratorExample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AD91F84176EBF6299526101E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StaticWebsiteGeneratorExample/Pods-StaticWebsiteGeneratorExample-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C0CF26C67656D1AAEDC75671 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0731A7551CA5BF5600090244 /* Sources */ = {
@@ -212,7 +201,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		07710B681F614AB400EBB31B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07710B6F1F614AB400EBB31B /* StaticWebsiteGeneratorExampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		07710B721F614AB400EBB31B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0731A7581CA5BF5600090244 /* StaticWebsiteGeneratorExample */;
+			targetProxy = 07710B711F614AB400EBB31B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0731A7601CA5BF5600090244 /* MainMenu.xib */ = {
@@ -268,6 +273,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -305,12 +311,12 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 		0731A7671CA5BF5600090244 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 21C1EB207D5306F08EF408E2 /* Pods-StaticWebsiteGeneratorExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -318,13 +324,11 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = diniska.StaticWebsiteGeneratorExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		0731A7681CA5BF5600090244 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0B0C274D86865B4B5B8215AC /* Pods-StaticWebsiteGeneratorExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -332,7 +336,66 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = diniska.StaticWebsiteGeneratorExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		07710B731F614AB400EBB31B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = StaticWebsiteGeneratorExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = diniska.StaticWebsiteGeneratorExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StaticWebsiteGeneratorExample.app/Contents/MacOS/StaticWebsiteGeneratorExample";
+			};
+			name = Debug;
+		};
+		07710B741F614AB400EBB31B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = StaticWebsiteGeneratorExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = diniska.StaticWebsiteGeneratorExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StaticWebsiteGeneratorExample.app/Contents/MacOS/StaticWebsiteGeneratorExample";
 			};
 			name = Release;
 		};
@@ -353,6 +416,15 @@
 			buildConfigurations = (
 				0731A7671CA5BF5600090244 /* Debug */,
 				0731A7681CA5BF5600090244 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07710B751F614AB400EBB31B /* Build configuration list for PBXNativeTarget "StaticWebsiteGeneratorExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07710B731F614AB400EBB31B /* Debug */,
+				07710B741F614AB400EBB31B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

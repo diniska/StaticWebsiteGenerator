@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "StaticWebsiteGenerator"
-  s.version      = "0.0.1-beta3"
+  s.version      = "0.0.1-beta4"
   s.summary      = "Simple static website generator library written in Swift."
 
   # This description is used to generate tags and improve search results.
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/diniska/StaticWebsiteGenerator.git", :tag => "0.0.1-beta3" }
+  s.source       = { :git => "https://github.com/diniska/StaticWebsiteGenerator.git", :tag => "0.0.1-beta5" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -135,7 +135,7 @@ Pod::Spec.new do |s|
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
   
-  s.dependency "Stencil", "~> 0.7.2"
-  s.dependency "PathKit", "~> 0.7.0"
+  s.dependency "Stencil", "~> 0.13.1"
+  s.dependency "PathKit", "~> 0.9.0"
 
 end

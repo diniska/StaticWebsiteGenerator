@@ -44,7 +44,7 @@ public struct Generator {
 
                 let lastPathPart: String
 
-                if request.url.isEmpty || request.url.characters.last == "/" {
+                if request.url.isEmpty || request.url.last == "/" {
                     lastPathPart = request.url + "index.html"
                 } else {
                     lastPathPart = request.url

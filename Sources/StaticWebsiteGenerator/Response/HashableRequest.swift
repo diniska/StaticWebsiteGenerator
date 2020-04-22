@@ -13,8 +13,8 @@ struct HashableRequest {
 }
 
 extension HashableRequest: Hashable {
-    var hashValue: Int {
-        return request.url.hashValue
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(request.url)
     }
 }
 

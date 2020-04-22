@@ -9,24 +9,22 @@
 import Foundation
 
 extension SimpleServerBuilder {
-    public typealias LocalizedResponseGenerator = (Localization) -> String
+    public typealias LocalizedResponseGenerator = (Localization) throws -> String
 
     public func byAppendingRequest(_ request: LocalizedRequest, withResponse response: @escaping LocalizedResponseGenerator) -> SimpleServerBuilder {
-        let wrapper = createResponse(request, response:  response)
-        return byAppendingRequest(request, withResponse: wrapper as! (Localization) -> String)
+        byAppendingRequest(request, withResponse: createResponse(request, response:  response))
     }
 
     public mutating func appendRequest(_ request: LocalizedRequest, withResponse response: @escaping LocalizedResponseGenerator) {
-        let wrapper = createResponse(request, response:  response)
-        appendRequest(request, withResponse: wrapper as! (Localization) -> String)
+        appendRequest(request, withResponse: createResponse(request, response:  response))
     }
 
     mutating func appendRequests<Sequence: Swift.Sequence>(_ requests: Sequence, withResponse response: @escaping LocalizedResponseGenerator) where Sequence.Iterator.Element == LocalizedRequest {
-        requests.map { (request) -> (Request, Response) in
-            let wrapper = createResponse(request, response:  response)
+        requests.map { (request) -> (LocalizedRequest, Response) in
+            let wrapper = createResponse(request, response: response)
             return (request, wrapper)
         }.forEach {
-            appendRequest($0.0 as! LocalizedRequest, withResponse: $0.1 as! (Localization) -> String)
+            appendRequest($0.0, withResponse: $0.1)
         }
     }
 
@@ -39,5 +37,5 @@ extension SimpleServerBuilder {
 }
 
 private func createResponse(_ request: LocalizedRequest, response: @escaping SimpleServerBuilder.LocalizedResponseGenerator) -> Response {
-    return GeneratedStringResponse { response(request.localization) }
+    return GeneratedStringResponse { try response(request.localization) }
 }
