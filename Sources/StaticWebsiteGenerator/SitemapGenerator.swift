@@ -21,7 +21,7 @@ private let emptyFileResponse = ""
 public func createSitemapGenerator(_ server: Server, baseUrl: String, scheme: String = "http") -> Response {
 
     func createContext() -> [String: Any] {
-        let requests = server.requestsPaths()
+        let requests = server.requestsPaths().sorted()
         let date = dateFormatter.string(from: Date())
         let result: [String: Any] = [
             "requests": requests,
