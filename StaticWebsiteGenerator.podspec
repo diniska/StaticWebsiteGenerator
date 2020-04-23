@@ -16,8 +16,9 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "StaticWebsiteGenerator"
-  s.version      = "0.0.1-beta4"
+  s.version      = "0.0.1-beta5"
   s.summary      = "Simple static website generator library written in Swift."
+  s.swift_versions = "5.0"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -91,7 +92,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = 'Source/*.swift', 'Source/**/*.swift'
+  s.source_files  = 'Sources/*.swift', 'Sources/**/*.swift'
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
