@@ -23,9 +23,13 @@ public struct SimpleServerBuilder {
     public mutating func appendRequest(_ request: Request, withResponse response: Response) {
         data[wrap(request)] = response
     }
-
+    
     public func build() -> Server {
         return SimpleServer(data: data)
+    }
+    
+    public static func build(@ServerBuilder _ build: () -> Server) -> Server {
+        build()
     }
 }
 

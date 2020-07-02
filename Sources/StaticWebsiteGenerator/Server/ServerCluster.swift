@@ -24,6 +24,10 @@ public struct ServerCluster {
         res.appendServer(server)
         return res
     }
+    
+    public init(@ServerBuilder _ build: () -> [Server]) {
+        self.init(servers: build())
+    }
 }
 
 extension ServerCluster: Server {
