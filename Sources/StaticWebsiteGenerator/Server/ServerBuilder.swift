@@ -14,7 +14,7 @@ public struct ServerBuilder {
     }
     
     public static func buildBlock(_ servers: Server...) -> ServerCluster {
-        ServerCluster({ servers })
+        ServerCluster({ return servers })
     }
 
     public static func buildBlock(_ tasks: ServerTask...) -> Server {
